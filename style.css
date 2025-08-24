@@ -1,0 +1,173 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.main-header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li {
+    margin: 0 1rem;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #3498db;
+}
+
+/* 섹션 공통 스타일 */
+.section {
+    padding: 4rem 1rem;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+/* 기술 스택 섹션 */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.skill-item {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+/* 포트폴리오 섹션 (Flexbox 활용) */
+.project-container {
+    display: flex;
+    flex-direction: column; /* 모바일 우선: 세로 정렬 */
+    gap: 2rem;
+    align-items: center;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    margin-top: 0;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #2980b9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #3498db;
+}
+
+/* 경험 섹션 */
+.experience-container {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.experience-item {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.experience-item h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.experience-item ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.main-footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.main-footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* --- 반응형 디자인을 위한 미디어 쿼리 --- */
+
+/* 태블릿 (화면 너비 768px 이상) */
+@media (min-width: 768px) {
+    .project-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .project-card {
+        width: calc(50% - 2rem); /* 2개씩 배치 */
+    }
+}
+
+/* 데스크톱 (화면 너비 1200px 이상) */
+@media (min-width: 1200px) {
+    .project-card {
+        width: calc(33.333% - 2rem); /* 3개씩 배치 */
+    }
+}
